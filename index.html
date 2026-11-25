@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17221e">
+  <meta name="description" content="Calculadora preliminar de tiro y funcionamiento de chimeneas de leña. Estima temperaturas, pérdidas de carga y punto de funcionamiento.">
+  <title>ChimeneaLab — Calculadora de tiro de chimeneas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="ChimeneaLab inicio"><span class="brand-mark">CL</span><span>chimenea<span class="brand-light">lab</span></span></a>
+    <nav><a href="#calculadora">Calculadora</a><a href="#catalogo">Aparatos</a><a href="#metodo">Metodología</a></nav>
+    <a class="top-cta" href="#calculadora">Calcular ahora <span>↗</span></a>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> HERRAMIENTA TÉCNICA · VERSIÓN 0.1</div>
+        <h1>Entiende el tiro.<br><em>Calcula tu chimenea.</em></h1>
+        <p class="hero-lead">Una herramienta para estimar el comportamiento de una chimenea de leña a partir de sus dimensiones, las condiciones ambientales y los datos del aparato.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#calculadora">Abrir calculadora <span>↓</span></a><a class="text-link" href="#metodo">Cómo se calcula <span>↗</span></a></div>
+        <div class="hero-footnote"><span class="mini-line"></span> Modelo físico preliminar · Cálculo estacionario 1D</div>
+      </div>
+      <div class="hero-visual" aria-label="Ilustración técnica de una chimenea">
+        <div class="visual-grid"></div>
+        <svg class="chimney-drawing" viewBox="0 0 540 500" role="img" aria-label="Esquema de una chimenea con flujo ascendente de gases">
+          <defs><linearGradient id="flue" x1="0" x2="1"><stop stop-color="#b7c3b9"/><stop offset=".5" stop-color="#edf0e8"/><stop offset="1" stop-color="#89988e"/></linearGradient><linearGradient id="heat" x1="0" x2="0" y1="1" y2="0"><stop stop-color="#d66e3d" stop-opacity=".05"/><stop offset="1" stop-color="#e99a60" stop-opacity=".8"/></linearGradient></defs>
+          <path d="M70 420H475" stroke="#52635a" stroke-width="1" opacity=".5"/><path d="M110 420V310H230V420" fill="#26352e" stroke="#74847a" stroke-width="2"/><path d="M126 420V330Q170 275 214 330V420" fill="#111b17" stroke="#89988e" stroke-width="2"/><path d="M145 400Q170 348 195 400" fill="none" stroke="#d77b4c" stroke-width="4"/><path d="M160 380Q170 354 181 380" fill="none" stroke="#f0b17b" stroke-width="3"/>
+          <rect x="153" y="55" width="52" height="265" rx="3" fill="url(#flue)" opacity=".95"/><rect x="166" y="55" width="26" height="265" fill="#293b32"/><path d="M179 296V84" stroke="#e98e58" stroke-width="3" stroke-dasharray="8 9"/><path d="M170 99l9-17 9 17" fill="none" stroke="#e98e58" stroke-width="3"/>
+          <path d="M145 55H213L205 40H153Z" fill="#a8b4aa" stroke="#e0e5dd"/><path d="M139 40H219" stroke="#e0e5dd" stroke-width="3"/><path d="M130 320H228" stroke="#a4b0a5" stroke-width="5"/>
+          <path d="M235 105H350" stroke="#9eaa9f" stroke-width="1" stroke-dasharray="3 5"/><path d="M235 300H350" stroke="#9eaa9f" stroke-width="1" stroke-dasharray="3 5"/><path d="M350 105V300M344 105H356M344 300H356" stroke="#d7dfd5" stroke-width="1.5"/><text x="365" y="198" fill="#e4e9e1" font-size="13" font-family="DM Mono">H · altura útil</text><text x="365" y="216" fill="#9eaa9f" font-size="10" font-family="DM Mono">ΔP = g · H · Δρ</text>
+          <path d="M208 135H285" stroke="#e98e58" stroke-width="1.5"/><circle cx="208" cy="135" r="3" fill="#e98e58"/><text x="294" y="139" fill="#e4e9e1" font-size="12" font-family="DM Mono">T gases</text><path d="M208 245H285" stroke="#9eaa9f" stroke-width="1.5"/><circle cx="208" cy="245" r="3" fill="#9eaa9f"/><text x="294" y="249" fill="#e4e9e1" font-size="12" font-family="DM Mono">Ø interior</text>
+          <path d="M95 465H250" stroke="#52635a" stroke-width="1"/><text x="95" y="484" fill="#91a096" font-size="10" font-family="DM Mono">ESQUEMA CONCEPTUAL · NO A ESCALA</text>
+        </svg>
+        <div class="visual-tag tag-top"><span class="tag-dot orange"></span> FLUJO ASCENDENTE</div><div class="visual-tag tag-bottom">ΔP <strong>≠</strong> tiro útil</div>
+      </div>
+    </section>
+    <section class="trust-strip"><div><strong>01</strong><span>Modelo físico transparente</span></div><div><strong>02</strong><span>Datos trazables</span></div><div><strong>03</strong><span>Hipótesis visibles</span></div><div><strong>04</strong><span>Sin falsa precisión</span></div></section>
+    <section class="calculator-section section-wrap" id="calculadora">
+      <div class="section-heading"><div><div class="eyebrow dark-eyebrow">CALCULADORA DE FUNCIONAMIENTO</div><h2>Define tu instalación.</h2></div><p>Introduce las condiciones del aparato y la geometría de la chimenea. El motor buscará el caudal que equilibra el tiro disponible y el requerido.</p></div>
+      <div class="calc-layout">
+        <form id="calc-form" class="form-panel">
+          <div class="form-head"><div><span class="step-label">CONFIGURACIÓN · 01 / 04</span><h3>Datos del aparato</h3></div><span class="form-icon">⌁</span></div>
+          <div class="field-grid">
+            <label class="field span-2"><span>Nombre / modelo <small>opcional</small></span><input id="appliance-name" type="text" value="Estufa de leña · ejemplo" placeholder="Marca y modelo"></label>
+            <label class="field"><span>Temperatura de humos <b>°C</b></span><input id="gas-temp" type="number" min="20" max="800" step="1" value="200" required></label>
+            <label class="field"><span>Potencia nominal <b>kW</b> <small>informativo</small></span><input id="power" type="number" min="0" step="0.1" value="8"></label>
+          </div>
+          <div class="subsection"><span class="step-label">CURVA DEL APARATO</span><p class="helper">Introduce al menos dos puntos de caudal y tiro requerido. Deben proceder de documentación técnica o mediciones. Los valores iniciales son solo demostrativos.</p></div>
+          <div class="curve-inputs" id="curve-inputs">
+            <div class="curve-row curve-row-head"><span>Caudal <small>g/s</small></span><span>Tiro requerido <small>Pa</small></span></div>
+            <div class="curve-row"><input aria-label="Caudal punto 1" class="flow-point" type="number" step="0.001" min="0.001" value="20"><input aria-label="Tiro punto 1" class="draft-point" type="number" step="0.1" min="0" value="10"></div>
+            <div class="curve-row"><input aria-label="Caudal punto 2" class="flow-point" type="number" step="0.001" min="0.001" value="50"><input aria-label="Tiro punto 2" class="draft-point" type="number" step="0.1" min="0" value="18"></div>
+            <div class="curve-row"><input aria-label="Caudal punto 3" class="flow-point" type="number" step="0.001" min="0.001" value="80"><input aria-label="Tiro punto 3" class="draft-point" type="number" step="0.1" min="0" value="32"></div>
+          </div>
+          <div class="demo-warning"><span>ⓘ</span><span>Curva de demostración. No representa una estufa comercial. Sustitúyela por datos documentados antes de interpretar el resultado.</span></div>
+          <label class="field source-field"><span>Procedencia de la curva <small>fabricante, ensayo o medición</small></span><input id="curve-source" type="text" value="Curva sintética de demostración — sustituir por fuente real" required></label>
+          <div class="form-divider"></div>
+          <div class="form-head"><div><span class="step-label">GEOMETRÍA · 02 / 04</span><h3>Chimenea</h3></div><span class="form-icon">↟</span></div>
+          <div class="field-grid">
+            <label class="field"><span>Altura vertical <b>m</b></span><input id="height" type="number" min="0.1" step="0.1" value="6" required></label>
+            <label class="field"><span>Longitud del conducto <b>m</b></span><input id="length" type="number" min="0.1" step="0.1" value="6" required></label>
+            <label class="field"><span>Diámetro interior <b>mm</b></span><select id="diameter"><option value="0.12">120 mm</option><option value="0.13">130 mm</option><option value="0.14">140 mm</option><option value="0.15" selected>150 mm</option><option value="0.16">160 mm</option><option value="0.18">180 mm</option><option value="0.20">200 mm</option><option value="0.25">250 mm</option></select></label>
+            <label class="field"><span>Rugosidad <b>mm</b></span><input id="roughness" type="number" min="0" step="0.01" value="0.1"></label>
+            <label class="field"><span>Conductancia térmica lineal <b>W/(m·K)</b></span><input id="conductance" type="number" min="0" step="0.05" value="0.8" required></label>
+            <label class="field"><span>Coeficiente K total <b>—</b></span><input id="k-loss" type="number" min="0" step="0.1" value="0.5"></label>
+          </div>
+          <div class="subsection"><span class="step-label">CONDICIONES AMBIENTALES · 03 / 04</span></div>
+          <div class="field-grid">
+            <label class="field"><span>Temperatura exterior <b>°C</b></span><input id="ambient-temp" type="number" min="-30" max="50" step="0.5" value="10"></label>
+            <label class="field"><span>Presión atmosférica <b>Pa</b></span><input id="pressure" type="number" min="50000" max="110000" step="10" value="101325"></label>
+            <label class="field"><span>Depresión del recinto <b>Pa</b></span><input id="room-depression" type="number" min="0" step="0.1" value="0"></label>
+            <label class="field"><span>Contribución del viento <b>Pa</b></span><input id="wind" type="number" step="0.1" value="0"></label>
+          </div>
+          <div class="subsection"><span class="step-label">PROPIEDADES DEL GAS · 04 / 04</span><p class="helper">Valores aproximados para el ejemplo. Para un estudio riguroso deben justificarse según la composición y temperatura de los productos de combustión.</p></div>
+          <div class="field-grid three-cols">
+            <label class="field"><span>R específica <b>J/(kg·K)</b></span><input id="gas-r" type="number" min="1" step="0.1" value="287.05"></label>
+            <label class="field"><span>Calor específico <b>J/(kg·K)</b></span><input id="gas-cp" type="number" min="1" step="1" value="1100"></label>
+            <label class="field"><span>Viscosidad <b>Pa·s</b></span><input id="gas-mu" type="number" min="0.000001" step="0.000001" value="0.000025"></label>
+          </div>
+          <div class="form-actions"><button class="button button-primary button-wide" type="submit">Calcular punto de funcionamiento <span>→</span></button><button class="reset-button" id="reset-button" type="button">Restablecer ejemplo</button></div>
+          <p class="form-privacy">El cálculo se ejecuta en tu navegador. Los datos no se envían a ningún servidor.</p>
+        </form>
+        <aside class="result-panel" id="results" aria-live="polite">
+          <div class="result-top"><span class="step-label light-label">RESULTADO DEL MODELO</span><span class="status-pill" id="result-status">PENDIENTE</span></div>
+          <div class="empty-result" id="empty-result"><div class="empty-orbit">↗</div><h3>Tu resultado aparecerá aquí.</h3><p>Completa los datos de la instalación y ejecuta el cálculo para obtener el punto de funcionamiento estimado.</p><div class="result-mini-list"><span>— <i>Caudal másico</i></span><span>— <i>Tiro disponible</i></span><span>— <i>Temperatura de salida</i></span></div></div>
+          <div id="result-content" hidden>
+            <div class="main-result"><span>CAUDAL MÁSICO ESTIMADO</span><div><strong id="out-flow">—</strong><small>kg/h</small></div><p id="out-flow-gs">— g/s</p></div>
+            <div class="result-metrics"><div><span>Tiro disponible</span><strong id="out-available">—</strong><small>Pa</small></div><div><span>Tiro requerido</span><strong id="out-required">—</strong><small>Pa</small></div><div><span>Temperatura salida</span><strong id="out-temp">—</strong><small>°C</small></div><div><span>Velocidad media</span><strong id="out-velocity">—</strong><small>m/s</small></div></div>
+            <div class="balance-block"><div class="balance-head"><span>Equilibrio de presiones</span><strong id="out-residual">—</strong></div><div class="balance-track"><div id="balance-fill"></div></div><p>La diferencia entre tiro disponible y requerido en el punto calculado.</p></div>
+            <div class="chart-block"><div class="chart-title"><span>CURVAS DE FUNCIONAMIENTO</span><small>Presión · Pa / Caudal · g/s</small></div><div id="curve-chart" class="chart-wrap"></div><div class="legend"><span><i class="legend-line green"></i> Chimenea · disponible</span><span><i class="legend-line orange"></i> Aparato · requerido</span></div></div>
+            <div class="detail-block"><button type="button" class="accordion-trigger" id="details-toggle" aria-expanded="false">Desglose de pérdidas y temperaturas <span>＋</span></button><div class="accordion-content" id="details-content" hidden></div></div>
+            <div class="sensitivity-block"><div class="chart-title"><span>COMPARAR ALTERNATIVAS</span><small>Diámetros interiores</small></div><div id="comparison-content"><button type="button" id="comparison-button" class="button button-outline">Comparar Ø 130 · 150 · 180 mm</button></div></div>
+            <div class="sensitivity-block"><div class="chart-title"><span>ANÁLISIS DE SENSIBILIDAD</span><small>Variación local ±5 %</small></div><div id="sensitivity-content"><button type="button" id="sensitivity-button" class="button button-outline">Analizar influencia de parámetros</button></div></div>
+          </div>
+          <div class="result-disclaimer"><span>!</span><p>Estimación preliminar. No constituye un proyecto, certificación ni comprobación de conformidad normativa o de seguridad.</p></div>
+        </aside>
+      </div>
+    </section>
+    <section class="catalog-section section-wrap" id="catalogo">
+      <div class="section-heading"><div><div class="eyebrow dark-eyebrow">BASE DE DATOS · EN DESARROLLO</div><h2>Datos de aparatos.</h2></div><p>Estamos construyendo una biblioteca de especificaciones con trazabilidad documental. Un dato nominal no equivale a una curva completa de funcionamiento.</p></div>
+      <div id="catalog-grid" class="catalog-grid"></div>
+      <div class="catalog-note"><span>i</span><p>Comprueba siempre el modelo exacto, la variante, la versión del manual y la placa de características. Estos registros no generan automáticamente una curva caudal-presión.</p></div>
+    </section>
+    <section class="method-section" id="metodo"><div class="section-wrap method-inner"><div><div class="eyebrow">CÓMO FUNCIONA EL MOTOR</div><h2>De la geometría<br>al punto de equilibrio.</h2><p>El motor resuelve un modelo estacionario unidimensional. Calcula el tiro por flotabilidad, descuenta las pérdidas del conducto y busca el caudal para el que la presión disponible coincide con la requerida por el aparato.</p><a class="method-link" href="#calculadora">Probar la calculadora ↗</a></div><div class="method-steps"><article><span>01</span><div><h3>Propiedades y temperatura</h3><p>Estima densidades y evolución térmica de los gases a lo largo del conducto.</p><code>ρ = p / (R · T)</code></div></article><article><span>02</span><div><h3>Tiro por flotabilidad</h3><p>Compara la densidad del aire exterior con la de los gases calientes.</p><code>ΔP = g · H · (ρ exterior − ρ gases)</code></div></article><article><span>03</span><div><h3>Pérdidas de carga</h3><p>Calcula pérdidas distribuidas mediante Darcy-Weisbach y pérdidas locales mediante coeficientes K.</p><code>ΔP = f · (L/D) · (ρv²/2) + ΣK · (ρv²/2)</code></div></article><article><span>04</span><div><h3>Punto de funcionamiento</h3><p>Busca el caudal donde se igualan la presión disponible de la chimenea y la requerida por el aparato.</p><code>ΔP chimenea(ṁ) − ΔP aparato(ṁ) = 0</code></div></article></div></div></section>
+    <section class="limits-section section-wrap"><div class="limits-heading"><div class="eyebrow dark-eyebrow">TRANSPARENCIA TÉCNICA</div><h2>Lo que calcula.<br><em>Y lo que no.</em></h2></div><div class="limits-grid"><div class="limit-card positive"><span>✓</span><h3>Incluido en el modelo</h3><ul><li>Tiro teórico por diferencia de densidades.</li><li>Pérdidas lineales y localizadas.</li><li>Enfriamiento estacionario por tramos.</li><li>Punto de funcionamiento con curva del aparato.</li><li>Sensibilidad local de parámetros.</li></ul></div><div class="limit-card caution"><span>!</span><h3>Fuera del alcance actual</h3><ul><li>Procedimiento completo UNE-EN 13384-1.</li><li>Encendido, transitorios y regulación de combustión.</li><li>Viento complejo y efecto de terminales.</li><li>Condensación, hollín y envejecimiento.</li><li>Certificación de seguridad o idoneidad.</li></ul></div></div></section>
+  </main>
+  <footer><div class="footer-brand"><span class="brand-mark">CL</span><span>chimenealab</span></div><p>Herramienta experimental de cálculo preliminar · Versión 0.1</p><a href="#inicio">Volver arriba ↑</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
