@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ChimeneaLab">
+  <rect width="64" height="64" rx="14" fill="#17221e"/>
+  <path d="M15 48V17h8v31M41 48V17h8v31" fill="none" stroke="#e8eee6" stroke-width="4" stroke-linecap="round"/>
+  <path d="M12 17h40" fill="none" stroke="#e99b6c" stroke-width="4" stroke-linecap="round"/>
+  <path d="M32 44c-6-5-5-11 0-17 1 5 7 7 7 13 0 4-3 7-7 7-4 0-7-3-7-7 0-2 1-4 3-6" fill="#e99b6c"/>
+</svg>
