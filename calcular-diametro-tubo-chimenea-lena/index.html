@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17221e">
+  <meta name="description" content="Aprende cómo calcular el diámetro de un tubo de chimenea de leña: datos del fabricante, caudal de humos, velocidad, pérdidas de carga y comprobación del conducto.">
+  <link rel="canonical" href="https://pabloypunto.github.io/chimenealab/calcular-diametro-tubo-chimenea-lena/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="ChimeneaLab">
+  <meta property="og:title" content="Cómo calcular el diámetro de un tubo de chimenea de leña | ChimeneaLab">
+  <meta property="og:description" content="Guía técnica para entender qué determina el diámetro interior de una chimenea de leña y cómo comprobarlo con los datos del aparato y de la instalación.">
+  <meta property="og:url" content="https://pabloypunto.github.io/chimenealab/calcular-diametro-tubo-chimenea-lena/">
+  <meta name="twitter:card" content="summary">
+  <title>Cómo calcular el diámetro de un tubo de chimenea de leña | ChimeneaLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../calculo-chimenea-lena/guide.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Cómo calcular el diámetro de un tubo de chimenea de leña",
+    "description":"Guía técnica sobre los factores que determinan el diámetro interior de una chimenea de leña y su comprobación.",
+    "inLanguage":"es-ES",
+    "mainEntityOfPage":"https://pabloypunto.github.io/chimenealab/calcular-diametro-tubo-chimenea-lena/",
+    "author":{"@type":"Organization","name":"ChimeneaLab"},
+    "publisher":{"@type":"Organization","name":"ChimeneaLab"}
+  }
+  </script>
+</head>
+<body class="guide-page">
+  <header class="topbar">
+    <a class="brand" href="../" aria-label="ChimeneaLab inicio"><span class="brand-mark">CL</span><span>chimenea<span class="brand-light">lab</span></span></a>
+    <nav><a href="../#calculadora">Calculadora</a><a href="../#catalogo">Aparatos</a><a href="../#metodo">Metodología</a><a href="../calculo-chimenea-lena/">Guía de cálculo</a><a href="./" aria-current="page">Diámetro</a></nav>
+    <a class="top-cta" href="../#calculadora">Calcular ahora <span>↗</span></a>
+  </header>
+  <main>
+    <section class="guide-hero">
+      <div class="guide-hero-inner">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> GUÍA TÉCNICA · DIMENSIONAMIENTO DEL CONDUCTO</div>
+        <h1>Cómo calcular el diámetro de un <em>tubo de chimenea de leña.</em></h1>
+        <p class="guide-lead">El diámetro interior de una chimenea no se obtiene de forma fiable a partir de la potencia de la estufa ni de una regla universal. Debe partir de las condiciones de evacuación indicadas por el fabricante y comprobarse junto con la altura, el recorrido, la temperatura de los gases, el aislamiento y las pérdidas de presión.</p>
+        <div class="guide-hero-actions"><a class="button button-primary" href="../#calculadora">Abrir la calculadora <span>↗</span></a><a class="guide-text-link" href="#procedimiento">Ver cómo se comprueba ↓</a></div>
+        <div class="guide-meta"><span>LECTURA TÉCNICA</span><span>DIÁMETRO · CAUDAL · VELOCIDAD · PÉRDIDAS</span></div>
+      </div>
+    </section>
+    <div class="guide-shell">
+      <aside class="guide-toc">
+        <span class="guide-toc-title">CONTENIDO</span>
+        <a href="#respuesta">Respuesta rápida</a>
+        <a href="#datos">Datos necesarios</a>
+        <a href="#seccion">Área y velocidad</a>
+        <a href="#influencia">Qué cambia al variar el diámetro</a>
+        <a href="#procedimiento">Procedimiento de cálculo</a>
+        <a href="#ejemplo">Ejemplo geométrico</a>
+        <a href="#senales">Señales de dimensionado incorrecto</a>
+        <a href="#errores">Errores frecuentes</a>
+        <a href="#normativa">Normativa y seguridad</a>
+      </aside>
+      <article class="guide-content">
+        <section id="respuesta">
+          <div class="eyebrow dark-eyebrow">01 · RESPUESTA DIRECTA</div>
+          <h2>¿Cómo saber qué diámetro necesita una chimenea de leña?</h2>
+          <p>El punto de partida es el diámetro de conexión y las condiciones de evacuación especificadas para el modelo exacto de estufa, insertable o chimenea. Después hay que comprobar que el conducto completo —no solo el primer tramo— puede transportar el caudal de humos previsto con unas pérdidas compatibles con el tiro disponible.</p>
+          <div class="guide-note"><strong>Regla fundamental</strong><p>No reduzcas el diámetro indicado por el fabricante por iniciativa propia. Tampoco des por válido un diámetro mayor sin comprobarlo: una sección excesiva puede reducir la velocidad y favorecer un mayor enfriamiento de los gases, dependiendo de la instalación.</p></div>
+          <p>Por eso, una respuesta como «tantos milímetros para tantos kilovatios» no es un método de dimensionamiento. Dos aparatos de potencia parecida pueden tener caudales de humos, temperaturas de salida y requisitos de tiro distintos.</p>
+        </section>
+        <section id="datos">
+          <div class="eyebrow dark-eyebrow">02 · INFORMACIÓN DE PARTIDA</div>
+          <h2>Qué datos necesitas para calcular el diámetro</h2>
+          <div class="guide-table-wrap"><table class="guide-table">
+            <thead><tr><th>Dato</th><th>Dónde obtenerlo</th><th>Para qué sirve</th></tr></thead>
+            <tbody>
+              <tr><td>Diámetro de salida</td><td>Manual y ficha técnica del aparato</td><td>Define la conexión prevista por el fabricante; no sustituye el cálculo del conducto completo.</td></tr>
+              <tr><td>Caudal másico de humos</td><td>Documentación técnica o ensayo del modelo</td><td>Permite relacionar el flujo másico con el área y la densidad para estimar la velocidad.</td></tr>
+              <tr><td>Temperatura de humos</td><td>Datos de ensayo o ficha técnica</td><td>Interviene en la densidad, el tiro por flotabilidad y las pérdidas.</td></tr>
+              <tr><td>Tiro requerido</td><td>Manual del aparato</td><td>Permite comprobar si la presión disponible satisface las necesidades del generador.</td></tr>
+              <tr><td>Altura y recorrido</td><td>Medición de la instalación</td><td>Determinan la altura efectiva, la longitud de rozamiento y el intercambio térmico.</td></tr>
+              <tr><td>Accesorios y conducto</td><td>Plano y especificaciones del sistema</td><td>Incluye codos, tes, reducciones, rugosidad, aislamiento y terminal.</td></tr>
+              <tr><td>Condiciones ambientales</td><td>Datos del emplazamiento y condiciones de cálculo</td><td>Afectan a la densidad del aire exterior y al balance de presiones.</td></tr>
+            </tbody>
+          </table></div>
+          <h3>Busca la ficha del aparato exacto</h3>
+          <p>Comprueba la marca, el modelo, la variante y la revisión del manual. No mezcles datos de aparatos parecidos ni tomes el diámetro comercial de un tubo como prueba de que la instalación está correctamente dimensionada.</p>
+          <p>Si el fabricante solo publica potencia y diámetro de conexión, pero no caudal másico, temperatura o tiro requerido, reconoce esa limitación. No es correcto inventar los datos que faltan a partir de la potencia nominal.</p>
+        </section>
+        <section id="seccion">
+          <div class="eyebrow dark-eyebrow">03 · RELACIÓN ENTRE CAUDAL Y SECCIÓN</div>
+          <h2>Área interior y velocidad de los gases</h2>
+          <p>Para un conducto circular de diámetro interior D, el área geométrica de paso es:</p>
+          <div class="formula-block"><span>ÁREA DE UNA SECCIÓN CIRCULAR</span><div>A = π · D² / 4</div><small>D debe expresarse en metros para obtener el área en m².</small></div>
+          <p>Si se conoce el caudal másico y la densidad media del gas en una sección, la velocidad media puede estimarse mediante:</p>
+          <div class="formula-block"><span>VELOCIDAD MEDIA</span><div>v = ṁ / (ρ · A)</div><small>ṁ: caudal másico en kg/s · ρ: densidad en kg/m³ · A: área en m² · v: velocidad en m/s.</small></div>
+          <p>Estas expresiones describen la relación geométrica y cinemática básica. No proporcionan por sí solas un diámetro recomendado: para seleccionar una sección hay que evaluar también las pérdidas de presión, la temperatura a lo largo del conducto y el tiro disponible.</p>
+          <div class="guide-note"><strong>Atención a las unidades</strong><p>Si el caudal está expresado en g/s, conviértelo a kg/s dividiendo entre 1.000. Si el diámetro está en milímetros, conviértelo a metros antes de calcular el área.</p></div>
+        </section>
+        <section id="influencia">
+          <div class="eyebrow dark-eyebrow">04 · COMPORTAMIENTO DEL CONDUCTO</div>
+          <h2>Qué ocurre cuando el diámetro es demasiado pequeño o grande</h2>
+          <h3>Si la sección es demasiado pequeña</h3>
+          <p>Para un mismo caudal másico y una misma densidad, reducir el área aumenta la velocidad. La presión dinámica crece con el cuadrado de esa velocidad y, en general, también aumentan las pérdidas de carga. El resultado puede ser una resistencia excesiva para el tiro disponible y un funcionamiento fuera de las condiciones previstas por el fabricante.</p>
+          <h3>Si la sección es excesiva</h3>
+          <p>Al aumentar el área, disminuye la velocidad media para el mismo caudal másico. Según la geometría y el aislamiento, el gas puede permanecer más tiempo en el conducto y ceder más calor. El enfriamiento puede reducir la diferencia de densidad que genera el tiro natural. No significa que todo conducto de mayor diámetro vaya a fallar, sino que «más grande» no equivale automáticamente a «mejor».</p>
+          <p>La dirección y magnitud del efecto dependen del conjunto. Un cambio de diámetro modifica simultáneamente velocidad, fricción, presión dinámica, transferencia térmica y densidad de los gases.</p>
+        </section>
+        <section id="procedimiento">
+          <div class="eyebrow dark-eyebrow">05 · MÉTODO DE COMPROBACIÓN</div>
+          <h2>Procedimiento para dimensionar el diámetro</h2>
+          <div class="guide-steps">
+            <article><span>01</span><div><h3>Consulta las instrucciones del aparato</h3><p>Identifica el diámetro de salida, las configuraciones admitidas y los requisitos de tiro. Respeta las restricciones expresas del fabricante.</p></div></article>
+            <article><span>02</span><div><h3>Caracteriza el conducto completo</h3><p>Registra altura vertical, longitud desarrollada, tramos horizontales o inclinados, cambios de sección, codos, tes, terminal, material y aislamiento.</p></div></article>
+            <article><span>03</span><div><h3>Obtén el caudal y la temperatura de los humos</h3><p>Utiliza datos del modelo exacto o mediciones adecuadas. La potencia nominal no permite deducir estos parámetros de forma universal.</p></div></article>
+            <article><span>04</span><div><h3>Calcula la velocidad para cada sección candidata</h3><p>Con el caudal másico, la densidad y el área interior, estima la velocidad. Mantén coherencia de unidades y propiedades del gas.</p></div></article>
+            <article><span>05</span><div><h3>Evalúa las pérdidas de presión</h3><p>Incluye rozamiento distribuido y pérdidas localizadas. Considera que densidad, velocidad y temperatura pueden cambiar a lo largo del recorrido.</p></div></article>
+            <article><span>06</span><div><h3>Comprueba el balance térmico y de tiro</h3><p>Evalúa el enfriamiento de los gases y la presión generada por flotabilidad. Compara la presión disponible con la requerida por el aparato en condiciones compatibles.</p></div></article>
+            <article><span>07</span><div><h3>Verifica las condiciones reglamentarias</h3><p>Comprueba los requisitos aplicables al sistema, al edificio, al terminal, a los materiales y a la instalación. La selección final corresponde a un dimensionamiento técnico completo.</p></div></article>
+          </div>
+          <p>El cálculo térmico y fluido-dinámico de la chimenea requiere resolver el sistema como conjunto. La guía general <a href="../calculo-chimenea-lena/">Cómo calcular una chimenea de leña</a> desarrolla la relación entre flotabilidad, pérdidas, enfriamiento y punto de funcionamiento.</p>
+        </section>
+        <section id="ejemplo">
+          <div class="eyebrow dark-eyebrow">06 · EJEMPLO GEOMÉTRICO</div>
+          <h2>Cómo cambia el área al variar el diámetro</h2>
+          <p>La siguiente tabla muestra únicamente el área geométrica de distintas secciones circulares. No son recomendaciones de diámetro ni una tabla de selección para estufas.</p>
+          <div class="guide-table-wrap"><table class="guide-table">
+            <thead><tr><th>Diámetro interior</th><th>Área aproximada</th><th>Relación respecto a Ø 150 mm</th></tr></thead>
+            <tbody>
+              <tr><td>120 mm</td><td>0,0113 m²</td><td>0,64</td></tr>
+              <tr><td>130 mm</td><td>0,0133 m²</td><td>0,75</td></tr>
+              <tr><td>150 mm</td><td>0,0177 m²</td><td>1,00</td></tr>
+              <tr><td>180 mm</td><td>0,0254 m²</td><td>1,44</td></tr>
+              <tr><td>200 mm</td><td>0,0314 m²</td><td>1,78</td></tr>
+            </tbody>
+          </table></div>
+          <p>La relación de áreas crece con el cuadrado del diámetro. Por ejemplo, pasar de 150 a 200 mm no supone un aumento del área del 33 %, sino aproximadamente del 78 %. La velocidad no disminuye en esa misma proporción si cambian también la densidad o el caudal; la tabla solo aísla el efecto geométrico.</p>
+        </section>
+        <section id="senales">
+          <div class="eyebrow dark-eyebrow">07 · DIAGNÓSTICO</div>
+          <h2>Señales que pueden indicar un problema de dimensionado</h2>
+          <p>Dificultades de encendido, humo que retorna al abrir la puerta, combustión inestable o depósitos anómalos pueden estar relacionados con el conducto, pero no identifican por sí solos un diámetro incorrecto. También pueden intervenir la entrada de aire, la ventilación del edificio, el combustible, el estado de limpieza, el viento, la temperatura del conducto o defectos de instalación.</p>
+          <p>No cambies el diámetro basándote únicamente en síntomas. Una chimenea debe inspeccionarse y evaluarse en su contexto. Si hay retorno de humos o sospecha de entrada de monóxido de carbono, deja de utilizar el aparato y solicita una revisión profesional; instala y mantén detectores de CO adecuados siguiendo sus instrucciones.</p>
+        </section>
+        <section id="errores">
+          <div class="eyebrow dark-eyebrow">08 · CONTROL DE CALIDAD</div>
+          <h2>Errores frecuentes al elegir el tubo</h2>
+          <ul class="guide-bullet-list">
+            <li><strong>Calcular solo con los kW:</strong> la potencia nominal no define por sí sola el caudal de humos ni el tiro requerido.</li>
+            <li><strong>Confundir diámetro exterior e interior:</strong> el área de paso depende del diámetro interior efectivo.</li>
+            <li><strong>Copiar el diámetro de otra instalación:</strong> altura, recorrido, aparato y condiciones pueden ser diferentes.</li>
+            <li><strong>Ignorar los accesorios:</strong> codos, tes, reducciones y terminales afectan a las pérdidas.</li>
+            <li><strong>Suponer que un tubo mayor siempre mejora el tiro:</strong> también cambia la velocidad y el comportamiento térmico.</li>
+            <li><strong>Reducir la salida del aparato sin autorización:</strong> puede contradecir las instrucciones del fabricante y alterar el funcionamiento.</li>
+            <li><strong>Usar una fórmula aislada como dimensionamiento:</strong> área y velocidad no sustituyen la comprobación térmica y fluido-dinámica.</li>
+          </ul>
+        </section>
+        <section id="normativa">
+          <div class="eyebrow dark-eyebrow">09 · ALCANCE Y SEGURIDAD</div>
+          <h2>Normativa, instalación y límites</h2>
+          <p>El dimensionamiento debe ajustarse a la reglamentación aplicable, a las instrucciones del fabricante y a las normas técnicas pertinentes. La UNE-EN 13384-1 es una referencia para el cálculo térmico y fluido-dinámico de chimeneas que sirven a un único aparato; esta página no reproduce el procedimiento completo ni ofrece una certificación.</p>
+          <p>También deben comprobarse aspectos que no se resuelven con el diámetro: clase de temperatura y presión del sistema, resistencia a la corrosión y al fuego de hollín cuando proceda, compatibilidad de componentes, distancias a materiales combustibles, soportes, paso por forjados, terminal y condiciones de mantenimiento.</p>
+          <p>ChimeneaLab ofrece una estimación preliminar y educativa. No sustituye un proyecto, una inspección ni la validación de un profesional competente. Una instalación defectuosa puede provocar incendio o intoxicación por monóxido de carbono.</p>
+        </section>
+        <section class="guide-next">
+          <div class="eyebrow">SIGUIENTE PASO · CHIMENEALAB</div>
+          <h2>Comprueba el comportamiento del conjunto.</h2>
+          <p>El diámetro es solo una de las variables. Utiliza la calculadora para explorar cómo interactúa con la altura, la temperatura, el recorrido y las pérdidas, siempre con datos trazables y teniendo presentes los límites del modelo.</p>
+          <a class="button button-primary" href="../#calculadora">Ir a la calculadora de tiro <span>↗</span></a>
+          <p class="guide-smallprint">La herramienta no determina por sí sola el diámetro reglamentario ni certifica una instalación.</p>
+          <p><a class="guide-text-link" href="../calculo-chimenea-lena/">Leer también: cómo calcular una chimenea de leña →</a></p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer><div class="footer-brand"><span class="brand-mark">CL</span><span>chimenealab</span></div><p>Guía técnica sobre diámetro de chimeneas · ChimeneaLab</p><a href="../">Volver a ChimeneaLab ↑</a></footer>
+</body>
+</html>
