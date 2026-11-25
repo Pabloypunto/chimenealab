@@ -1,0 +1,6 @@
+import { createManufacturerRecord } from './manufacturer-data.js';
+export const manufacturerCatalog = Object.freeze([
+  createManufacturerRecord({manufacturer:'HWAM',model:'Serie HWAM 4500 con Autopilot',fuel:'Leña',ratedPowerKW:4.9,flueGasTemperatureC:312,flueGasMassFlow:{value:4.1,unit:'g/s'},requiredDraftPa:12,outletDiameterMm:150,source:{reference:'Installation and users manual, ref. 10.08.2026 / 53-4500, página 12',url:'https://www.hwam.com/pub/media/hwam/manuals/EN16510/HWAM_4500/AUT/53-4500_ENG.pdf',documentDate:'2026-08-10',page:12,testStandard:'EN 16510'}}),
+  createManufacturerRecord({manufacturer:'Morsø',model:'8643',fuel:'Leña',ratedPowerKW:8.9,flueGasTemperatureC:348,flueGasMassFlow:{value:7.5,unit:'g/s'},requiredDraftPa:12,source:{reference:'Instructions for installation and use, 72860001, secciones 1.9 y 4.0, páginas 26 y 33',url:'https://morsoe.com/images/productfiles/da/manual/72860001%20-%208600%20-%20DK_ENG.pdf',documentDate:'2025-10-31',page:'26 y 33',testStandard:'EN 16510'}})
+]);
+export function getManufacturerCatalog(){return manufacturerCatalog.map(record=>structuredClone(record));}
