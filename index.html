@@ -30,7 +30,7 @@
       <div class="hero-copy">
         <div class="eyebrow"><span class="eyebrow-dot"></span> HERRAMIENTA TÉCNICA · VERSIÓN 0.1</div>
         <h1>Calculadora de tiro<br><em>para chimeneas de leña.</em></h1>
-        <p class="hero-lead">Una herramienta para estimar el comportamiento de una chimenea de leña a partir de sus dimensiones, las condiciones ambientales y los datos del aparato.</p>
+        <p class="hero-lead">Calcula el tiro de una chimenea de leña y estima su punto de funcionamiento a partir de la altura, el diámetro, la temperatura de los humos, las condiciones ambientales y la curva de presión del aparato. Un modelo físico preliminar que muestra sus hipótesis y límites.</p>
         <div class="hero-actions"><a class="button button-primary" href="#calculadora">Abrir calculadora <span>↓</span></a><a class="text-link" href="#metodo">Cómo se calcula <span>↗</span></a></div>
         <div class="hero-footnote"><span class="mini-line"></span> Modelo físico preliminar · Cálculo estacionario 1D</div>
       </div>
@@ -108,6 +108,60 @@
           </div>
           <div class="result-disclaimer"><span>!</span><p>Estimación preliminar. No constituye un proyecto, certificación ni comprobación de conformidad normativa o de seguridad.</p></div>
         </aside>
+      </div>
+    </section>
+    <section class="explain-section section-wrap" id="calcular-tiro">
+      <div class="explain-intro">
+        <div class="eyebrow dark-eyebrow">CÁLCULO DEL TIRO DE UNA CHIMENEA</div>
+        <h2>¿Cómo calcular el tiro de una chimenea de leña?</h2>
+        <p>El tiro es la diferencia de presión que permite que los productos de combustión asciendan por el conducto y sean evacuados al exterior. Se genera principalmente por la diferencia de densidad entre los gases calientes del interior y el aire exterior. Sin embargo, el tiro teórico no es todo el tiro útil: hay que considerar el enfriamiento de los gases y las pérdidas de presión a lo largo de la instalación.</p>
+        <p>Para estimar el funcionamiento no basta con conocer la altura o el diámetro del tubo. También influyen la temperatura y el caudal de los humos, la geometría del recorrido, la rugosidad, los cambios de dirección, las condiciones ambientales y las exigencias de tiro del aparato.</p>
+      </div>
+      <div class="explain-grid">
+        <article class="explain-card">
+          <span class="explain-number">01</span>
+          <h3>Datos de la estufa o chimenea</h3>
+          <p>La temperatura de salida y la relación entre caudal y presión requerida describen el comportamiento del aparato. Utiliza datos del fabricante o mediciones justificadas; no sustituyas una curva real por valores supuestos.</p>
+        </article>
+        <article class="explain-card">
+          <span class="explain-number">02</span>
+          <h3>Geometría y aislamiento del conducto</h3>
+          <p>La altura vertical interviene en la generación de tiro. La longitud, el diámetro, la rugosidad y la conductancia térmica influyen en las pérdidas de carga y en el enfriamiento de los gases.</p>
+        </article>
+        <article class="explain-card">
+          <span class="explain-number">03</span>
+          <h3>Condiciones de funcionamiento</h3>
+          <p>La temperatura exterior, la presión atmosférica, la depresión del recinto y la contribución del viento pueden modificar el balance de presiones de la instalación.</p>
+        </article>
+      </div>
+      <div class="explain-callout">
+        <strong>Importante</strong>
+        <p>Un diámetro mayor no garantiza por sí solo un mejor funcionamiento, ni una altura concreta asegura un tiro suficiente. El resultado depende del conjunto aparato-conducto y de las condiciones consideradas.</p>
+      </div>
+    </section>
+    <section class="interpret-section section-wrap" id="interpretar-resultados">
+      <div class="section-heading">
+        <div><div class="eyebrow dark-eyebrow">LECTURA DE RESULTADOS</div><h2>Qué significa cada resultado.</h2></div>
+        <p>La calculadora estima un punto de equilibrio del modelo. Interpreta las magnitudes junto con la calidad de los datos introducidos y las limitaciones indicadas.</p>
+      </div>
+      <div class="interpret-grid">
+        <article><h3>Caudal másico</h3><p>Es la masa de gases que atraviesa el conducto por unidad de tiempo. Se expresa en kg/h y también en g/s para facilitar la comparación con documentación técnica.</p></article>
+        <article><h3>Tiro disponible</h3><p>Es la presión motriz estimada después de considerar la flotabilidad, las condiciones térmicas y las contribuciones introducidas en el modelo.</p></article>
+        <article><h3>Tiro requerido</h3><p>Es la presión que el aparato necesita para ese caudal, según la curva que hayas introducido. La fuente y el rango de esa curva condicionan la validez del resultado.</p></article>
+        <article><h3>Temperatura de salida</h3><p>Es la temperatura estimada de los gases al final del conducto según el modelo de enfriamiento estacionario. No equivale a una medición real.</p></article>
+        <article><h3>Velocidad media</h3><p>Relaciona el caudal másico, la densidad calculada y la sección interior del conducto. Ayuda a contextualizar el régimen de circulación.</p></article>
+        <article><h3>Residuo de equilibrio</h3><p>Representa la diferencia entre presión disponible y requerida en el punto calculado. Un residuo pequeño indica convergencia matemática, no certifica que la instalación sea segura o adecuada.</p></article>
+      </div>
+    </section>
+    <section class="faq-section section-wrap" id="preguntas-frecuentes">
+      <div class="eyebrow dark-eyebrow">DUDAS HABITUALES</div>
+      <h2>Preguntas frecuentes sobre el tiro de una chimenea.</h2>
+      <div class="faq-list">
+        <details><summary>¿Qué datos necesito para calcular el tiro de una chimenea de leña?</summary><p>Como mínimo, necesitas describir el aparato y su curva de tiro requerido, la altura y geometría del conducto, la temperatura de los gases, las condiciones ambientales y las características térmicas e hidráulicas del conducto. Cuanto más trazables sean los datos, más útil será la estimación.</p></details>
+        <details><summary>¿La altura de la chimenea determina por sí sola el tiro?</summary><p>No. La altura contribuye al tiro por flotabilidad, pero el resultado también depende de la temperatura y densidad de los gases, la temperatura exterior, las pérdidas distribuidas y localizadas, la geometría y las necesidades del aparato.</p></details>
+        <details><summary>¿Puedo calcular el diámetro del tubo solo con la potencia de la estufa?</summary><p>No de forma fiable. La potencia nominal por sí sola no define el caudal de humos ni la presión requerida. Deben consultarse las instrucciones y los datos técnicos del aparato y comprobarse el sistema completo conforme a los requisitos aplicables.</p></details>
+        <details><summary>¿Este cálculo sustituye un cálculo conforme a UNE-EN 13384-1?</summary><p>No. ChimeneaLab implementa un modelo preliminar estacionario y no el procedimiento completo de UNE-EN 13384-1. No es un proyecto, una certificación ni una comprobación de seguridad o conformidad normativa.</p></details>
+        <details><summary>¿Qué ocurre si no tengo la curva de tiro del fabricante?</summary><p>Puedes explorar el funcionamiento del motor con datos sintéticos para entender cómo responde, pero esos resultados son demostrativos. No deben utilizarse para dimensionar ni validar una instalación real. Solicita la documentación técnica del aparato o recurre a mediciones adecuadas.</p></details>
       </div>
     </section>
     <section class="catalog-section section-wrap" id="catalogo">
