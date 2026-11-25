@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17221e">
+  <meta name="description" content="Guía técnica para calcular una chimenea de leña: datos del aparato, altura, diámetro, temperatura de humos, tiro, pérdidas de carga y comprobaciones del sistema.">
+  <link rel="canonical" href="https://pabloypunto.github.io/chimenealab/calculo-chimenea-lena/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="ChimeneaLab">
+  <meta property="og:title" content="Cómo calcular una chimenea de leña: guía técnica | ChimeneaLab">
+  <meta property="og:description" content="Aprende qué datos intervienen en el cálculo de una chimenea de leña y cómo se relacionan el tiro, la temperatura, el diámetro y las pérdidas de carga.">
+  <meta property="og:url" content="https://pabloypunto.github.io/chimenealab/calculo-chimenea-lena/">
+  <meta name="twitter:card" content="summary">
+  <title>Cómo calcular una chimenea de leña: guía técnica | ChimeneaLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./guide.css">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Cómo calcular una chimenea de leña: guía técnica",
+    "description":"Guía técnica sobre los datos, variables y comprobaciones que intervienen en el cálculo de una chimenea de leña.",
+    "inLanguage":"es-ES",
+    "mainEntityOfPage":"https://pabloypunto.github.io/chimenealab/calculo-chimenea-lena/",
+    "author":{"@type":"Organization","name":"ChimeneaLab"},
+    "publisher":{"@type":"Organization","name":"ChimeneaLab"}
+  }
+  </script>
+</head>
+<body class="guide-page">
+  <header class="topbar">
+    <a class="brand" href="../" aria-label="ChimeneaLab inicio"><span class="brand-mark">CL</span><span>chimenea<span class="brand-light">lab</span></span></a>
+    <nav><a href="../#calculadora">Calculadora</a><a href="../#catalogo">Aparatos</a><a href="../#metodo">Metodología</a><a href="./" aria-current="page">Guía de cálculo</a></nav>
+    <a class="top-cta" href="../#calculadora">Calcular ahora <span>↗</span></a>
+  </header>
+  <main>
+    <section class="guide-hero">
+      <div class="guide-hero-inner">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> GUÍA TÉCNICA · DISEÑO Y COMPROBACIÓN</div>
+        <h1>Cómo calcular una <em>chimenea de leña.</em></h1>
+        <p class="guide-lead">El cálculo de una chimenea no consiste únicamente en elegir una altura o un diámetro. Hay que comprobar que el conducto puede evacuar los productos de combustión y que el tiro disponible resulta compatible con las necesidades del aparato durante las condiciones de funcionamiento consideradas.</p>
+        <div class="guide-hero-actions"><a class="button button-primary" href="../#calculadora">Abrir la calculadora <span>↗</span></a><a class="guide-text-link" href="#pasos">Ir al procedimiento ↓</a></div>
+        <div class="guide-meta"><span>LECTURA TÉCNICA</span><span>TIRO · CAUDAL · TEMPERATURA · PÉRDIDAS</span></div>
+      </div>
+    </section>
+    <div class="guide-shell">
+      <aside class="guide-toc">
+        <span class="guide-toc-title">CONTENIDO</span>
+        <a href="#que-se-calcula">Qué se calcula</a>
+        <a href="#datos-necesarios">Datos necesarios</a>
+        <a href="#pasos">Procedimiento</a>
+        <a href="#tiro">Tiro por flotabilidad</a>
+        <a href="#perdidas">Pérdidas de carga</a>
+        <a href="#temperatura">Enfriamiento</a>
+        <a href="#diametro-altura">Altura y diámetro</a>
+        <a href="#equilibrio">Punto de funcionamiento</a>
+        <a href="#errores">Errores frecuentes</a>
+        <a href="#normativa">Normativa y límites</a>
+      </aside>
+      <article class="guide-content">
+        <section id="que-se-calcula">
+          <div class="eyebrow dark-eyebrow">01 · CONCEPTO</div>
+          <h2>Qué significa calcular una chimenea de leña</h2>
+          <p>Una chimenea es el sistema de evacuación que conduce los productos de combustión desde la salida del aparato hasta el exterior. Su comportamiento depende de la interacción entre el aparato, el conducto y el entorno del edificio. El objetivo del cálculo es comprobar que el sistema puede trabajar dentro de las condiciones de presión, caudal y temperatura previstas.</p>
+          <p>En una instalación de tiro natural, la diferencia de densidad entre los gases calientes del conducto y el aire exterior genera una diferencia de presión. Esa presión motriz se consume parcialmente al vencer el rozamiento con las paredes, los cambios de dirección, las entradas, las salidas y otras singularidades. Además, los gases se enfrían mientras ascienden, modificando su densidad y, por tanto, el tiro que pueden producir.</p>
+          <div class="guide-note"><strong>Idea clave</strong><p>El tiro teórico generado por la altura no es lo mismo que el tiro útil disponible en la conexión del aparato. Para analizar el funcionamiento hay que descontar las pérdidas y considerar las condiciones reales de la instalación.</p></div>
+        </section>
+        <section id="datos-necesarios">
+          <div class="eyebrow dark-eyebrow">02 · INFORMACIÓN DE PARTIDA</div>
+          <h2>Datos necesarios antes de empezar</h2>
+          <p>La calidad del cálculo depende de la calidad de los datos de entrada. Conviene reunir la documentación del aparato y describir el recorrido completo del conducto antes de introducir números en una herramienta.</p>
+          <div class="guide-table-wrap"><table class="guide-table">
+            <thead><tr><th>Grupo</th><th>Datos que conviene recopilar</th><th>Por qué importan</th></tr></thead>
+            <tbody>
+              <tr><td>Generador</td><td>Fabricante, modelo, combustible previsto, potencia, temperatura y caudal másico de humos, tiro requerido.</td><td>Define las condiciones de los productos de combustión y las exigencias del aparato.</td></tr>
+              <tr><td>Geometría</td><td>Altura vertical efectiva, longitud desarrollada, diámetro interior, secciones, codos, derivaciones y terminal.</td><td>Determina la contribución de flotabilidad y las pérdidas de presión.</td></tr>
+              <tr><td>Material y aislamiento</td><td>Tipo de conducto, rugosidad, aislamiento y características térmicas del conjunto.</td><td>Influyen en la fricción y en el enfriamiento de los gases.</td></tr>
+              <tr><td>Entorno</td><td>Temperatura exterior de cálculo, presión atmosférica, ventilación y posible depresión del recinto.</td><td>Condiciona la densidad del aire exterior y el balance de presiones.</td></tr>
+            </tbody>
+          </table></div>
+          <h3>Prioriza la documentación del fabricante</h3>
+          <p>La potencia nominal no permite deducir por sí sola el caudal de humos ni la curva de tiro requerido. Tampoco debe confundirse el diámetro de la boca de salida con una comprobación completa del conducto. Consulta las instrucciones del modelo exacto y conserva la referencia del documento, su revisión y la página de la que procede cada dato.</p>
+          <p>Si no dispones de una curva de presión del aparato, no la sustituyas por una curva inventada. Puedes realizar un análisis exploratorio con hipótesis claramente identificadas, pero no presentar ese resultado como verificación de una instalación real.</p>
+        </section>
+        <section id="pasos">
+          <div class="eyebrow dark-eyebrow">03 · MÉTODO DE TRABAJO</div>
+          <h2>Procedimiento para calcular una chimenea</h2>
+          <div class="guide-steps">
+            <article><span>01</span><div><h3>Identifica el aparato y sus requisitos</h3><p>Registra los datos técnicos del generador: caudal másico de gases, temperatura de salida, tiro requerido y condiciones de ensayo. Comprueba que corresponden al modelo y configuración instalados.</p></div></article>
+            <article><span>02</span><div><h3>Describe el recorrido del conducto</h3><p>Mide la altura vertical y la longitud de cada tramo. Anota el diámetro interior real, los cambios de sección, codos, piezas de unión y terminales. Distingue longitud desarrollada de altura vertical: no son magnitudes intercambiables.</p></div></article>
+            <article><span>03</span><div><h3>Estima la temperatura de los gases</h3><p>La temperatura disminuye a medida que los gases transfieren calor al conducto y al entorno. El aislamiento, la longitud, el caudal y las propiedades térmicas condicionan esa evolución.</p></div></article>
+            <article><span>04</span><div><h3>Calcula el tiro por flotabilidad</h3><p>Compara la densidad del aire exterior con la densidad media de los gases a lo largo de la altura efectiva. La diferencia integrada proporciona la presión teórica debida a la flotabilidad.</p></div></article>
+            <article><span>05</span><div><h3>Calcula las pérdidas de presión</h3><p>Evalúa las pérdidas distribuidas por rozamiento y las pérdidas localizadas en accesorios. La velocidad y la densidad del gas intervienen en ambas.</p></div></article>
+            <article><span>06</span><div><h3>Comprueba el equilibrio con el aparato</h3><p>Compara la presión disponible de la chimenea con la presión requerida por el aparato para el mismo caudal. Si se dispone de una curva fiable, puede buscarse el punto en el que ambas coinciden.</p></div></article>
+            <article><span>07</span><div><h3>Revisa los límites y las condiciones desfavorables</h3><p>Analiza la sensibilidad a las hipótesis, la calidad de los datos y las condiciones de operación relevantes. Una convergencia matemática no sustituye las comprobaciones reglamentarias ni la inspección de la instalación.</p></div></article>
+          </div>
+        </section>
+        <section id="tiro">
+          <div class="eyebrow dark-eyebrow">04 · PRESIÓN MOTRIZ</div>
+          <h2>Cálculo del tiro por flotabilidad</h2>
+          <p>En una aproximación unidimensional, la presión teórica generada por la diferencia de densidad entre el aire exterior y los gases puede expresarse mediante una integral a lo largo de la altura vertical:</p>
+          <div class="formula-block"><span>TIRO TEÓRICO POR FLOTABILIDAD</span><div>Δp<sub>th</sub> = g ∫<sub>0</sub><sup>H</sup> (ρ<sub>aire</sub> − ρ<sub>gases</sub>(z)) dz</div><small>La densidad de los gases puede variar con la altura por el enfriamiento.</small></div>
+          <p>Si se simplifica el problema suponiendo densidades constantes, la expresión se reduce a:</p>
+          <div class="formula-inline">Δp<sub>th</sub> ≈ g · H · (ρ<sub>aire</sub> − ρ<sub>gases</sub>)</div>
+          <p>Esta forma simplificada ayuda a entender la relación física: una mayor altura vertical y una mayor diferencia de densidad aumentan la presión teórica. No obstante, en una instalación real la temperatura de los gases no suele ser constante y las pérdidas también aumentan o cambian con el caudal.</p>
+          <h3>Cómo se estima la densidad</h3>
+          <p>Para una primera aproximación de gas ideal:</p>
+          <div class="formula-inline">ρ = p / (R · T)</div>
+          <p>La temperatura debe expresarse en kelvin, la presión en pascales y la constante específica del gas en J/(kg·K). Para el aire exterior y para los productos de combustión se utilizan propiedades coherentes con cada composición. Usar la constante del aire seco para representar sin justificación los gases de combustión introduce una simplificación que debe declararse.</p>
+          <div class="guide-note"><strong>Altura efectiva</strong><p>En la contribución de flotabilidad interviene el desnivel vertical. La longitud total del recorrido, que puede incluir tramos inclinados u horizontales, se utiliza para otros cálculos como las pérdidas por fricción y el intercambio térmico.</p></div>
+        </section>
+        <section id="perdidas">
+          <div class="eyebrow dark-eyebrow">05 · RESISTENCIA DEL CONDUCTO</div>
+          <h2>Pérdidas de carga: rozamiento y accesorios</h2>
+          <p>La presión generada por flotabilidad debe vencer la resistencia al movimiento de los gases. En un conducto, las pérdidas se suelen separar en distribuidas —a lo largo de la pared— y localizadas —asociadas a singularidades—.</p>
+          <h3>Pérdidas distribuidas: Darcy-Weisbach</h3>
+          <div class="formula-block"><span>ECUACIÓN DE DARCY-WEISBACH</span><div>Δp<sub>f</sub> = f · (L / D) · (ρ · v² / 2)</div><small>f: factor de fricción de Darcy · L: longitud · D: diámetro hidráulico · ρ: densidad · v: velocidad media</small></div>
+          <p>El factor de fricción depende del régimen de flujo, del número de Reynolds y de la rugosidad relativa. No debe confundirse el factor de Darcy con el factor de Fanning: sus valores no son iguales.</p>
+          <div class="formula-inline">Re = (ρ · v · D) / μ</div>
+          <p>En esta expresión, μ es la viscosidad dinámica. El número de Reynolds permite caracterizar el régimen de flujo. En la zona de transición no es apropiado asumir automáticamente un único factor de fricción fiable sin justificar el método empleado.</p>
+          <h3>Pérdidas localizadas: coeficientes K</h3>
+          <div class="formula-inline">Δp<sub>local</sub> = ΣK · (ρ · v² / 2)</div>
+          <p>Los coeficientes K representan la resistencia de codos, tes, entradas, salidas, reducciones y otros elementos. Deben corresponder a la geometría y condiciones del accesorio. No es correcto asignar un valor genérico a todos los codos o terminales sin identificar su configuración.</p>
+          <p>La presión dinámica (ρv²/2) depende del estado del gas y de la velocidad. Por eso, cambiar el diámetro afecta de forma importante a las pérdidas, incluso aunque el caudal másico se mantenga.</p>
+        </section>
+        <section id="temperatura">
+          <div class="eyebrow dark-eyebrow">06 · COMPORTAMIENTO TÉRMICO</div>
+          <h2>Enfriamiento de los gases en el conducto</h2>
+          <p>Los gases ceden calor a través de las paredes de la chimenea. Si la temperatura disminuye, su densidad aumenta y la diferencia respecto al aire exterior se reduce. Esto puede disminuir el tiro por flotabilidad y también modificar la velocidad y las pérdidas.</p>
+          <p>Un modelo simplificado de enfriamiento estacionario en un tramo, con temperatura ambiente constante y conductancia térmica lineal constante, puede expresarse como:</p>
+          <div class="formula-block"><span>ENFRIAMIENTO EXPONENCIAL POR TRAMO</span><div>T<sub>salida</sub> = T<sub>ambiente</sub> + (T<sub>entrada</sub> − T<sub>ambiente</sub>) · e<sup>−U′L/(ṁ·c<sub>p</sub>)</sup></div><small>U′: conductancia térmica lineal · L: longitud · ṁ: caudal másico · cₚ: calor específico</small></div>
+          <p>Esta ecuación representa una aproximación útil para explorar la evolución térmica cuando sus parámetros están definidos. La conductancia térmica lineal no debe elegirse arbitrariamente: necesita una fuente, una estimación justificada o una medición. En un análisis más detallado, las propiedades y condiciones pueden variar a lo largo del recorrido.</p>
+        </section>
+        <section id="diametro-altura">
+          <div class="eyebrow dark-eyebrow">07 · GEOMETRÍA</div>
+          <h2>Cómo influyen la altura y el diámetro</h2>
+          <h3>Altura</h3>
+          <p>La altura vertical contribuye a generar tiro por flotabilidad. Sin embargo, aumentar la altura también puede incrementar la longitud de conducto, la superficie de intercambio térmico y las pérdidas distribuidas. Por tanto, no existe una regla válida según la cual añadir altura siempre mejore el funcionamiento en la misma proporción.</p>
+          <h3>Diámetro interior</h3>
+          <p>El diámetro determina el área disponible para el paso de los gases. Para una sección circular:</p>
+          <div class="formula-inline">A = π · D² / 4 &nbsp;&nbsp; y &nbsp;&nbsp; v = ṁ / (ρ · A)</div>
+          <p>A igualdad de caudal másico y densidad, un diámetro mayor reduce la velocidad media. Esto modifica la presión dinámica y las pérdidas por fricción y accesorios. Pero también cambia la transferencia térmica por unidad de longitud y el comportamiento global del sistema.</p>
+          <div class="guide-note"><strong>No hay un diámetro universal</strong><p>El diámetro no debe elegirse únicamente por la potencia nominal ni por una tabla genérica sin contexto. Debe respetar las instrucciones del fabricante y verificarse dentro del cálculo aplicable a la instalación concreta.</p></div>
+        </section>
+        <section id="equilibrio">
+          <div class="eyebrow dark-eyebrow">08 · RESULTADO DEL SISTEMA</div>
+          <h2>El punto de funcionamiento: chimenea y aparato</h2>
+          <p>La chimenea aporta una presión disponible que depende del caudal. El aparato, por su parte, requiere una determinada presión para evacuar los gases al mismo caudal. El punto de funcionamiento se encuentra donde ambas magnitudes se igualan:</p>
+          <div class="formula-block"><span>CONDICIÓN DE EQUILIBRIO</span><div>Δp<sub>disponible, chimenea</sub>(ṁ) = Δp<sub>requerida, aparato</sub>(ṁ)</div><small>La diferencia entre ambas curvas es el residuo de presión del cálculo.</small></div>
+          <p>En la práctica, esto implica evaluar la instalación para distintos caudales, calcular la presión disponible en cada caso y compararla con la curva de tiro requerido del aparato. Una intersección dentro del rango documentado permite identificar un punto de equilibrio matemático del modelo.</p>
+          <p>Si la curva del aparato se introduce mediante puntos tabulados, la interpolación solo debe realizarse dentro del intervalo cubierto por los datos. Extrapolar fuera de ese rango puede producir una apariencia de precisión sin respaldo documental. Si no se encuentra una intersección dentro del intervalo de búsqueda, no debe forzarse un resultado.</p>
+          <div class="guide-note"><strong>Potencia no equivale a caudal</strong><p>La potencia nominal se puede mostrar como dato descriptivo, pero no permite deducir automáticamente el caudal másico ni la curva de tiro requerido. Esos parámetros deben proceder de documentación o mediciones.</p></div>
+        </section>
+        <section id="errores">
+          <div class="eyebrow dark-eyebrow">09 · CONTROL DE CALIDAD</div>
+          <h2>Errores frecuentes al calcular una chimenea</h2>
+          <ul class="guide-bullet-list">
+            <li><strong>Usar solo la altura:</strong> ignora el diámetro, el enfriamiento y las pérdidas del recorrido.</li>
+            <li><strong>Confundir longitud y altura:</strong> la longitud desarrollada no sustituye al desnivel vertical en el cálculo de flotabilidad.</li>
+            <li><strong>Elegir el diámetro por la potencia:</strong> la potencia por sí sola no determina el caudal ni el tiro requerido.</li>
+            <li><strong>Olvidar los accesorios:</strong> codos, tes, reducciones y terminales pueden aportar pérdidas relevantes.</li>
+            <li><strong>Suponer una temperatura constante:</strong> puede ocultar el enfriamiento de los gases a lo largo del conducto.</li>
+            <li><strong>Inventar datos del aparato:</strong> una curva sintética sirve para probar el algoritmo, no para validar una instalación.</li>
+            <li><strong>Confundir convergencia con seguridad:</strong> que el algoritmo encuentre una solución no acredita conformidad normativa ni buen funcionamiento real.</li>
+          </ul>
+        </section>
+        <section id="normativa">
+          <div class="eyebrow dark-eyebrow">10 · ALCANCE Y RESPONSABILIDAD</div>
+          <h2>Normativa, seguridad y límites del cálculo</h2>
+          <p>El dimensionamiento y la comprobación de chimeneas deben realizarse conforme a la reglamentación aplicable, las instrucciones del fabricante y las normas técnicas pertinentes. La UNE-EN 13384-1 es una referencia para el cálculo térmico y fluido-dinámico de chimeneas que sirven a un único aparato; esta guía no reproduce su procedimiento completo ni sustituye una verificación profesional.</p>
+          <p>El modelo de ChimeneaLab es una aproximación estacionaria unidimensional. No resuelve el encendido ni los transitorios, no representa en detalle la combustión o los sistemas de regulación, no modela de forma completa los efectos del viento y terminales, y no comprueba por sí solo condensación, corrosión, depósitos, distancias a materiales combustibles, resistencia al fuego ni requisitos de instalación.</p>
+          <p>La selección, instalación, inspección y mantenimiento de una chimenea afectan a la evacuación de humos y al riesgo de incendio o intoxicación por monóxido de carbono. Para una instalación real, consulta a un profesional competente y sigue las instrucciones del fabricante y la normativa local aplicable.</p>
+        </section>
+        <section class="guide-next">
+          <div class="eyebrow">HERRAMIENTA CHIMENEALAB</div>
+          <h2>Aplica el modelo a una instalación.</h2>
+          <p>Cuando dispongas de los datos técnicos del aparato y de la geometría del conducto, puedes introducirlos en la calculadora para estimar el punto de funcionamiento y revisar el balance de presiones.</p>
+          <a class="button button-primary" href="../#calculadora">Ir a la calculadora de tiro <span>↗</span></a>
+          <p class="guide-smallprint">Los valores de demostración no representan un aparato comercial. Sustitúyelos por datos trazables antes de interpretar cualquier resultado.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer><div class="footer-brand"><span class="brand-mark">CL</span><span>chimenealab</span></div><p>Guía técnica de cálculo preliminar · ChimeneaLab</p><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Volver arriba ↑</a></footer>
+</body>
+</html>
