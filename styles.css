@@ -2,33 +2,3 @@
 @media(max-width:900px){.hero{padding-left:6%;padding-right:6%;grid-template-columns:1fr 1fr}.hero h1{font-size:54px}.calc-layout{grid-template-columns:1fr}.result-panel{position:relative;top:auto;min-height:0}.empty-result{padding:55px 20px}.method-inner{gap:6%}.limits-section{gap:5%}.trust-strip{padding-left:5%;padding-right:5%}.trust-strip div{padding-left:12px}.trust-strip span{font-size:10px}}
 @media(max-width:650px){.topbar{height:64px;padding:0 20px}.topbar nav{display:none}.top-cta{font-size:10px;padding:9px 11px}.hero{display:block;padding:62px 7% 25px;min-height:auto}.hero h1{font-size:48px;letter-spacing:-2.8px}.hero-lead{font-size:13px}.hero-footnote{margin-top:35px}.hero-visual{min-height:330px;margin-top:12px}.chimney-drawing{max-width:420px}.tag-top{top:15px;right:0}.tag-bottom{bottom:22px;left:0}.trust-strip{grid-template-columns:1fr 1fr;gap:17px;padding:20px 7%}.trust-strip div{border:0;padding:0}.section-wrap{width:88%}.calculator-section{padding:70px 0}.section-heading{display:block;margin-bottom:27px}.section-heading h2,.limits-heading h2{font-size:36px}.section-heading>p{margin-top:15px}.form-panel{padding:24px 18px}.field-grid{gap:14px 10px}.field>span{font-size:10px}.field input,.field select{padding:0 8px;font-size:11px}.three-cols{grid-template-columns:1fr}.form-actions{align-items:stretch;flex-direction:column;gap:12px}.reset-button{padding:8px}.result-panel{padding:24px 19px}.main-result strong{font-size:47px}.chart-title{align-items:flex-start;flex-direction:column}.catalog-section{padding:10px 0 70px}.catalog-grid{grid-template-columns:1fr}.catalog-stats strong{font-size:16px}.method-section{padding:70px 0}.method-inner{grid-template-columns:1fr;gap:45px}.method-inner h2{font-size:38px}.limits-section{padding:70px 0;grid-template-columns:1fr;gap:30px}.limits-grid{grid-template-columns:1fr}.limits-heading h2{font-size:37px}footer{flex-wrap:wrap;gap:12px;padding:24px 6%}footer p{order:3;width:100%;margin:0}}
 .source-field{margin-top:12px}.sensitivity-block+.sensitivity-block{border-top:1px solid #ffffff20;margin-top:18px;padding-top:18px}.detail-table td[colspan]{text-align:right}
-
-
-/* Contenido editorial y SEO de la portada */
-.explain-section{padding:76px 0 72px;border-top:1px solid #e4e9e2}
-.explain-intro{max-width:820px}
-.explain-intro h2,.faq-section h2{font:600 clamp(30px,3.5vw,42px)/1.15 var(--display);letter-spacing:-1.5px;margin:14px 0 20px;color:#26352e}
-.explain-intro p{font-size:13px;line-height:1.85;color:#68766b;margin:0 0 14px}
-.explain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
-.explain-card{background:#fff;border:1px solid #e0e5dd;padding:23px}
-.explain-number{font:10px var(--mono);color:#d98252}
-.explain-card h3,.interpret-grid h3{font:700 16px var(--display);color:#29382f;margin:12px 0 8px}
-.explain-card p,.interpret-grid p{font-size:11px;line-height:1.75;color:#718074;margin:0}
-.explain-callout{display:flex;gap:18px;align-items:flex-start;margin-top:16px;padding:18px 21px;background:#e9eee6;border-left:3px solid #d98252}
-.explain-callout strong{font:700 12px var(--display);color:#34483a;white-space:nowrap}
-.explain-callout p{font-size:11px;line-height:1.7;color:#68766b;margin:0}
-.interpret-section{padding:72px 0 82px}
-.interpret-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 24px;border-top:1px solid #e0e5dd}
-.interpret-grid article{padding:21px 0;border-bottom:1px solid #e0e5dd}
-.interpret-grid h3{margin:0 0 8px}
-.faq-section{padding:65px 0 95px}
-.faq-section h2{max-width:700px;margin-bottom:28px}
-.faq-list{border-top:1px solid #dfe5dd}
-.faq-list details{border-bottom:1px solid #dfe5dd;padding:17px 0}
-.faq-list summary{font:600 14px var(--display);color:#344238;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}
-.faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary:after{content:"＋";font:14px var(--mono);color:#d98252}
-.faq-list details[open] summary:after{content:"−"}
-.faq-list details p{max-width:850px;margin:13px 0 2px;font-size:12px;line-height:1.8;color:#6d7a70}
-@media(max-width:900px){.explain-grid{grid-template-columns:1fr 1fr}.interpret-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.explain-section,.interpret-section,.faq-section{padding-top:52px;padding-bottom:58px}.explain-grid,.interpret-grid{grid-template-columns:1fr}.explain-callout{display:block}.explain-callout strong{display:block;margin-bottom:8px}}
