@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pabloypunto.github.io/chimenealab/sitemap.xml
